@@ -1,11 +1,12 @@
 # Sunbath Style Dress Transformer
 
-This project is a small AI app for fashion-contest prototyping. It transforms an uploaded clothing photo into an **American-style sunbath suitable dress concept** using an image-to-image diffusion pipeline.
+This project is a small AI app for fashion-contest prototyping. It transforms an uploaded clothing photo into an **American-style sunbathing suitable dress concept** using an image-to-image diffusion pipeline.
 
 ## Features
 
 - Upload any subject/dress image
 - Add optional style guidance
+- Tune generation with strength, guidance scale, inference steps, and seed
 - Generate transformed outputs using a locally run diffusion model
 - Includes a built-in, fashion-focused default prompt
 
@@ -22,7 +23,7 @@ This project is a small AI app for fashion-contest prototyping. It transforms an
 2. Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 3. Run the app:
@@ -35,6 +36,7 @@ python app.py
 
 ## Notes
 
+- First run downloads the model weights and can take time.
 - For best quality and speed, use a GPU-enabled environment.
 - The default model is `runwayml/stable-diffusion-v1-5` and can be overridden via environment variable:
 
